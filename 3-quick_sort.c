@@ -27,10 +27,10 @@ void swap(int *x, int *y)
  *
  * Return: index of the pivot element after the rearrangenment
  */
-size_t partition(int *array, size_t low, size_t high, size_t size)
+size_t partition(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
-	size_t left, j;
+	int left, j;
 
 	for (j = low; j < high && array[j] < pivot; j++)
 	;
@@ -66,7 +66,7 @@ size_t partition(int *array, size_t low, size_t high, size_t size)
  * @high: index of the last element of the subarray
  * @size: original size of the array
  */
-void quick_sort_recursion(int *array, size_t low, size_t high, size_t size)
+void quick_sort_recursion(int *array, int low, int high, size_t size)
 {
 	int pivot_index;
 
